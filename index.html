@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">TaskManager</div>
+        <ul class="nav-links">
+            <li><a href="#" id="dashboardLink" class="active">Dashboard</a></li>
+            <li><a href="#" id="calendarLink">Calendar</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div id="dashboardContent" class="content-section">
+            <header>
+                <div class="header-left">
+                    <h1>Save your Seconds!!</h1>
+                </div>
+                <div class="header-right">
+                    <input type="text" id="taskInput" placeholder="Enter new task">
+                    <input type="date" id="taskDate">
+                    <select id="taskPriority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button class="addBtn">Add Task</button>
+                </div>
+            </header>
+
+            <!-- Task Lists -->
+            <div class="content">
+                <div class="task-list">
+                    <h2>To Do</h2>
+                    <ul id="taskUL">
+                        <!-- Task items will be appended here by JS -->
+                    </ul>
+                </div>
+
+                <div class="task-list">
+                    <h2>In Progress</h2>
+                    <ul id="progressUL">
+                        <!-- Task items will be moved here when marked as in progress -->
+                    </ul>
+                </div>
+
+                <div class="task-list">
+                    <h2>Completed</h2>
+                    <ul id="completedUL">
+                        <!-- Task items will be moved here when marked as completed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Section -->
+        <div id="calendarContent" class="content-section" style="display: none;">
+            <h1>Calendar</h1>
+            <!-- Calendar content can be added here -->
+            <p>Calendar functionality will be implemented here.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
